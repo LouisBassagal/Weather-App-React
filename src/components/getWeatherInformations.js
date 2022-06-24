@@ -16,7 +16,11 @@ function GetWeatherInformations({data, setData}) {
   }
   return (
     <div className="weather-container">
-      <div className='weather-data-input'>
+     <div className="weather-input-coords">
+      <div className="weather-coords">
+        {data.coord ? <p>{ data.coord.lat } { data.coord.lon }</p> : <p>No data !</p>}
+      </div>
+      <div>
         <input
               className='weather-input'
               placeholder="Enter Location"
@@ -24,11 +28,11 @@ function GetWeatherInformations({data, setData}) {
               onKeyDown={handleInput}
               onChange={handleInput}
               />
-        {data.coord ? <p>{ data.coord.lat } { data.coord.lon }</p> : null}
       </div>
+    </div>
       <div className='weather-name-data'>
-        {data.name && data.sys ? <h1>{ data.name }, { data.sys.country }</h1> : null }
-        {data.main && data.weather ? <p>{ data.main.temp }°C, { data.weather[0].main }</p> : null}
+        {data.name && data.sys ? <h1>{ data.name }, { data.sys.country }</h1> : <h1>Enter the name of a city !</h1> }
+        {data.main && data.weather ? <p>{ data.main.temp }°C, { data.weather[0].main }</p> : <p>Nothing to see here !</p>}
       </div>
     </div>
   )

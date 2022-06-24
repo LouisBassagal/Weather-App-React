@@ -9,11 +9,11 @@
     color: white;
     border-radius: 50px;
     border-width: 5px;
-    border-color: rgba(104, 104, 104, 0.548);
+    border-color: rgba(255, 255, 255, 0.575);
     text-align: center;
     display: block;
-    margin-top: 1%;
-    width: 15%;
+    margin-top: 3%;
+    width: 30%;
     height: 30px;
     background-color: rgba(104, 104, 104, 0);
     font-size: 20px;
@@ -21,22 +21,31 @@
     margin-right: auto;
 }
 
+.weather-coords {
+    color: white;
+    font-size: 20px
+}
+
 .weather-data-input {
-    display: grid;
-    
-    flex: wrap;
+    display: flex;
+    flex: basic;
 }
 
-.weather-name-data p, .weather-container p {
+.weather-input-coords {
+    display: flex;
+}
+
+.weather-input-coords > * {
+    flex: 1 0 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.weather-name-data p {
     font-size: 2.6rem;
+    color: white;
 }
 
-.weather-weather {
-    transform: rotate(90deg);
-    margin-left: 100%;
-    font-size: 50px;
-    margin: 0 auto;
-    width: 1px;
-    height: 1px;
-    background-color: black;
+.weather-container {
+    height: 700px;
 }

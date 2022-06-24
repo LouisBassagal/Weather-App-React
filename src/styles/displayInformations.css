@@ -1,0 +1,22 @@
+.weather-information-container {
+    background-color: rgba(255, 255, 255, 0.329);
+    width: 500px;
+    height: 200px;
+    border-radius: 45px;
+    display: flex;
+    flex: space-between;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.weather-information {
+    border-radius: 45px;
+    padding: 30px;
+}
+
+.weather-info-logos {
+    width: 100px;
+    height: 100px;
+}
