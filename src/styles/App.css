@@ -13,5 +13,6 @@
     position: fixed;
     background-color: black;
     z-index: -1;
-    animation: fadeIn 5s;
+    transition-duration: 1s;
+    animation: fade 10s ease-in 0s forwards;
 }
