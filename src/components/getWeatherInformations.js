@@ -2,12 +2,15 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import '../styles/getWeatherInformations.css'
 
+require('dotenv').config();
+const appId = process.env.REACT_APP_ID
+
 function GetWeatherInformations({data, setData}) {
   const [location, setLocation] = useState('');
   function handleInput(e) {
     setLocation(e.target.value)
     if (e.key === 'Enter') {
-      const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=95835b80c4fc7970b242716821a152cf&units=metric`
+      const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${appId}&units=metric`
       axios.get(urlWeather).then((response) => {
         setData(response.data)
       })
